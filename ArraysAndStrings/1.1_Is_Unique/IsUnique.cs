@@ -106,10 +106,10 @@ namespace ArraysAndStrings._1._1_Is_Unique
         private static bool AlphabetDictionaryImplementation(string input)
         {
             // Suitable for small alphabet sizes only like ASCII
-            // Space complexity O(alphabet size), for ASCII is 256
+            // Space complexity O(alphabet size), for ASCII is 128
             // Time complexity O(n)
 
-            var alphabet = new bool[256];
+            var alphabet = new bool[128];
 
             for (var i = 0; i < input.Length; i++)
             {

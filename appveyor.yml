@@ -8,11 +8,14 @@ init:
 install:
 before_build:
   - cmd: dotnet --version
-  - cmd: dotnet restore All.sln --verbosity m
+  - cmd: dotnet restore All.sln --verbosity d
 build_script:
-  - cmd: dotnet publish All.sln
+  - cmd: dotnet publish All.sln -o ..\artifacts --verbosity d --framework netcoreapp2.0 --runtime win10-x64
 after_build:
 artifacts:
+  - path: artifacts
+    name: bin
+    type: zip
 clone_depth: 1
 test_script:
   # ToDo Tests

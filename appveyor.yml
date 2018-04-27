@@ -8,9 +8,9 @@ init:
 install:
 before_build:
   - cmd: dotnet --version
-  - cmd: dotnet restore All.sln --verbosity d
+  - cmd: dotnet restore All.sln --verbosity m
 build_script:
-  - cmd: dotnet publish All.sln -o ..\artifacts --verbosity d --framework netcoreapp2.0 --runtime win10-x64
+  - cmd: dotnet publish All.sln -o ..\artifacts --verbosity m --framework netcoreapp2.0 --runtime win10-x64
 after_build:
 artifacts:
   - path: artifacts

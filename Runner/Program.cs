@@ -14,9 +14,16 @@ namespace Runner
             using (var scope = _kernel.BeginLifetimeScope())
             {
                 var tasks = scope.Resolve<IEnumerable<ITask>>();
+                var currentCount = 0;
                 foreach (var task in tasks)
                 {
+                    ConsoleOutput.Instance.WriteLine(() => $"{++currentCount} -> {task.GetType().Name}:");
+
                     task.Run(ConsoleOutput.Instance);
+
+                    // Two new lines for separation
+                    ConsoleOutput.Instance.WriteNewLine();
+                    ConsoleOutput.Instance.WriteNewLine();
                 }
             }
 

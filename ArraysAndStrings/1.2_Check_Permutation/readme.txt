@@ -1,0 +1,1 @@
+Given two strings, write a method to decide if on is a permutation of the other.

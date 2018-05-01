@@ -1,7 +1,10 @@
 ﻿using System.Collections.Generic;
+﻿using System.Runtime.CompilerServices;
 using ArraysAndStrings;
 using Autofac;
 using Core;
+
+[assembly: InternalsVisibleTo("Tests")]
 
 namespace Runner
 {

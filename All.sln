@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chapters", "Chapters", "{F5
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{649E7358-5A4B-4BAA-99F1-D6708FA28B8F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreesAndGraphs", "TreesAndGraphs\TreesAndGraphs.csproj", "{3D8378F1-9924-463E-BE9A-009B541FD8B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,9 +40,14 @@ Global
 		{649E7358-5A4B-4BAA-99F1-D6708FA28B8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{649E7358-5A4B-4BAA-99F1-D6708FA28B8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{649E7358-5A4B-4BAA-99F1-D6708FA28B8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D8378F1-9924-463E-BE9A-009B541FD8B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D8378F1-9924-463E-BE9A-009B541FD8B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D8378F1-9924-463E-BE9A-009B541FD8B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D8378F1-9924-463E-BE9A-009B541FD8B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{7A75397B-7AD7-4C54-BEDB-131FBD6E6133} = {F5F32BAB-2CA4-4C0C-9123-6F2ACF3F630C}
 		{26641262-96B4-4972-96BC-DD7D11577136} = {F5F32BAB-2CA4-4C0C-9123-6F2ACF3F630C}
+		{3D8378F1-9924-463E-BE9A-009B541FD8B5} = {F5F32BAB-2CA4-4C0C-9123-6F2ACF3F630C}
 	EndGlobalSection
 EndGlobal

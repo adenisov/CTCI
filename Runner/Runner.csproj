@@ -9,5 +9,6 @@
   <ItemGroup>
     <ProjectReference Include="..\ArraysAndStrings\ArraysAndStrings.csproj" />
     <ProjectReference Include="..\LinkedLists\LinkedLists.csproj" />
+    <ProjectReference Include="..\TreesAndGraphs\TreesAndGraphs.csproj" />
   </ItemGroup>
 </Project>

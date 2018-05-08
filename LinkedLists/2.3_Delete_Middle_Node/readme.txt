@@ -1,0 +1,1 @@
+Implement an algorithm to remove a middle node in a singly linked list

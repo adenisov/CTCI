@@ -1,8 +1,9 @@
-﻿using System.Collections.Generic;
 ﻿using System.Runtime.CompilerServices;
+using System.Collections.Generic;
 using ArraysAndStrings;
 using Autofac;
 using Core;
+using LinkedLists;
 
 [assembly: InternalsVisibleTo("Tests")]
 
@@ -36,7 +37,10 @@ namespace Runner
         static Program()
         {
             var builder = new ContainerBuilder();
-            builder.RegisterModule<ArraysAndStringsModule>();
+            {
+                builder.RegisterModule<ArraysAndStringsModule>();
+                builder.RegisterModule<LinkedListsModule>();
+            }
 
             _kernel = builder.Build();
         }

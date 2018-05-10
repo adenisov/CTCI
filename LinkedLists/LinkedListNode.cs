@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
@@ -23,22 +24,43 @@ namespace LinkedLists
         }
     }
 
-    public sealed class LinkedListNode<T>
+    public sealed class LinkedListNode<T> : ICloneable
     {
+        public LinkedListNode()
+        {
+        }
+
+        public LinkedListNode(T value) : this()
+        {
+            Value = value;
+        }
+
+        public LinkedListNode(T value, LinkedListNode<T> next) : this(value)
+        {
+            Next = next;
+        }
+
         public LinkedListNode<T> Next { get; set; }
 
         public T Value { get; set; }
 
-
         public override string ToString()
         {
+            var visited = new HashSet<LinkedListNode<T>>();
             var builder = new StringBuilder();
 
             var node = this;
             while (node != null)
             {
+                if (visited.Contains(node))
+                {
+                    builder.Append($"{node.Value} ... Loop Detected");
+                    return builder.ToString();
+                }
+
                 builder.Append($"{node.Value}");
 
+                visited.Add(node);
                 node = node.Next;
 
                 if (node != null)
@@ -49,5 +71,7 @@ namespace LinkedLists
 
             return builder.ToString();
         }
+
+        public object Clone() => new LinkedListNode<T>(Value, (LinkedListNode<T>) Next?.Clone());
     }
 }
